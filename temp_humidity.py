@@ -23,7 +23,7 @@ def do_measure():
     time_value=http_get('http://karandin.kirov.ru.net/scripts/epoch2.pl')
     d = dht.DHT11(machine.Pin(4))
     d.measure()
-    address = ("185.125.217.131", 2003)
+    address = ("0.0.0.0", 2003)
     data_temperature = b'micropython_sk.temperature.home '+str(d.temperature())+' '+str(time_value)
     data_humidity = b'micropython_sk.humidity.home '+str(d.humidity())+' '+str(time_value)
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)

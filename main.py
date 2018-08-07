@@ -39,7 +39,7 @@ def do_measure():
     d = dht.DHT11(machine.Pin(4))
     d.measure()
     adc = machine.ADC(0)
-    address = ("185.125.217.131", 2003)
+    address = ("0.0.0.0", 2003)
     data_temperature = b'micropython_sk.temperature.home '+str(d.temperature())+' '+str(time_value)
     data_humidity = b'micropython_sk.humidity.home '+str(d.humidity())+' '+str(time_value)
     data_light = b'micropython_sk.light.home '+str(1024-adc.read())+' '+str(time_value)
