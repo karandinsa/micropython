@@ -18,4 +18,5 @@ def http_get(url):
             break
     s.close()
     return int(epoch_time[1])
+
 http_get('http://karandin.kirov.ru.net/scripts/epoch2.pl')
